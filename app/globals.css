@@ -1,4 +1,3 @@
-
 * {
   box-sizing: border-box;
 }
@@ -89,11 +88,13 @@ a {
   color: #bfff00;
 }
 
-/* HERO BANNER */
+/* =========================================================
+   HERO BANNER
+   ========================================================= */
+
 .hero-banner {
   position: relative;
   width: 100%;
-  height: 450px;
   margin-bottom: 50px;
   overflow: hidden;
   border-radius: 18px;
@@ -102,22 +103,25 @@ a {
 
 .hero-banner img {
   width: 100%;
-  height: 100%;
+  height: auto;
   display: block;
-  object-fit: cover;
-  object-position: center;
 }
 
-/* PROJECT GRID */
+/* =========================================================
+   PROJECT GRID
+   ========================================================= */
+
 .works-grid {
-   margin-top: 30px;
-    display: grid;
+  display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 12px;
+  margin-top: 30px;
 }
 
+/* =========================================================
+   WORK CARD
+   ========================================================= */
 
-/* CARD */
 .work-card {
   position: relative;
   display: block;
@@ -213,11 +217,13 @@ a {
   transform: translateY(0);
 }
 
-/* BOTTOM BANNER */
+/* =========================================================
+   BOTTOM BANNER
+   ========================================================= */
+
 .bottom-banner {
   position: relative;
   width: 100%;
-  height: 450px;
   margin-top: 30px;
   overflow: hidden;
   border-radius: 18px;
@@ -226,13 +232,14 @@ a {
 
 .bottom-banner img {
   width: 100%;
-  height: 100%;
+  height: auto;
   display: block;
-  object-fit: cover;
-  object-position: center;
 }
 
-/* SOCIAL LINKS */
+/* =========================================================
+   SOCIAL LINKS
+   ========================================================= */
+
 .social-links {
   display: flex;
   justify-content: center;
@@ -272,7 +279,10 @@ a {
   display: block;
 }
 
-/* CONTACT BUTTON */
+/* =========================================================
+   CONTACT BUTTON
+   ========================================================= */
+
 .contact-button {
   position: fixed;
   left: 50%;
@@ -300,19 +310,20 @@ a {
   filter: brightness(1.08);
 }
 
-/* TABLET */
+/* =========================================================
+   TABLET
+   ========================================================= */
+
 @media (max-width: 1000px) {
   .works-grid {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
-
-  .hero-banner,
-  .bottom-banner {
-    height: 380px;
-  }
 }
 
-/* MOBILE */
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
 @media (max-width: 700px) {
   .portfolio-container {
     width: calc(100% - 24px);
@@ -350,13 +361,14 @@ a {
   /* HERO BANNER */
   .hero-banner {
     width: 100%;
-    height: 280px;
     margin-bottom: 50px;
     border-radius: 12px;
   }
 
   .hero-banner img {
-    object-position: center;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
   }
 
   /* PROJECT GRID */
@@ -382,13 +394,14 @@ a {
   /* BOTTOM BANNER */
   .bottom-banner {
     width: 100%;
-    height: 280px;
     margin-top: 40px;
     border-radius: 12px;
   }
 
   .bottom-banner img {
-    object-position: center;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
   }
 
   /* SOCIAL LINKS */
@@ -416,9 +429,13 @@ a {
   }
 }
 
+/* =========================================================
+   SHOWCASE SECTION
+   ========================================================= */
+
 .showcase-section {
-  margin-top: 80px;
   width: 100%;
+  margin-top: 80px;
 }
 
 .showcase-grid {
@@ -480,6 +497,8 @@ a {
   letter-spacing: 0.02em;
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 }
+
+/* SHOWCASE MOBILE */
 @media (max-width: 768px) {
   .showcase-grid {
     grid-template-columns: 1fr;
